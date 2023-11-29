@@ -1,5 +1,8 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
+
+// components
+import Navbar from './components/Navbar.vue'
 import Block from '@/components/Block.vue'
 
 const state = reactive({
@@ -17,13 +20,7 @@ const checkFocused = (blockIndex: number) =>
 <template>
   <div class="container mx-auto">
     <div class="grid grid-rows-6 grid-cols-3 gap-6 min-h-screen p-6">
-      <Block
-        class="row-span-1 col-span-2"
-        blockLabel="Block 00"
-        :isBlur="!checkFocused(0)"
-        @mouseover="setFocused(0)"
-        @mouseleave="setFocused()"
-      />
+      <Navbar class="row-span-1 col-span-2" />
 
       <Block
         class="row-span-2 col-span-1"

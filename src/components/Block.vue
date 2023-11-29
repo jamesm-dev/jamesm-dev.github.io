@@ -58,7 +58,7 @@ const openLink = (url: string | null) => {
   >
     <span v-if="blockLabel" class="label">{{ blockLabel }}</span>
 
-    <img v-if="blockLogo" :src="blockLogo" class="logo" />
+    <img v-if="blockLogo" :src="blockLogo" loading="lazy" class="logo" />
 
     <span
       class="title"
