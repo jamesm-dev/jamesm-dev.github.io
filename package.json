@@ -4,7 +4,7 @@
   "private": true,
   "scripts": {
     "dev": "vite",
-    "build": "run-p type-check \"build-only {@}\" --",
+    "build": "run-p type-check \"build-only {@}\" -- && cpy \"dist/**/*\" docs",
     "preview": "vite preview",
     "build-only": "vite build",
     "type-check": "vue-tsc --noEmit -p tsconfig.app.json --composite false",
@@ -23,6 +23,7 @@
     "@vue/eslint-config-prettier": "^8.0.0",
     "@vue/eslint-config-typescript": "^12.0.0",
     "@vue/tsconfig": "^0.4.0",
+    "cpy-cli": "^5.0.0",
     "eslint": "^8.49.0",
     "eslint-plugin-vue": "^9.17.0",
     "npm-run-all2": "^6.1.1",
