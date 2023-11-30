@@ -1,6 +1,6 @@
-# James Malatabon
+# James Malatabon | Full-stack Engineer
 
-This template should help get you started developing with Vue 3 in Vite.
+This template should help you create your personal porfolio website. In this project, I would like to showcase my ability to create almost identical copies of websites that I like and to showcase my quite good attention to detail when it comes to front-end development.
 
 ## Recommended IDE Setup
 
