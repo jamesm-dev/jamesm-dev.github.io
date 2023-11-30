@@ -62,10 +62,15 @@ defineProps({
       <div class="flex items-center">
         <img :src="logo" class="logo rounded-md" loading="lazy" />
 
-        <span class="text-black text-2xl font-semibold ms-2.5"> James Malatabon </span>
+        <div class="flex flex-col md:flex-row md:items-center">
+          <span class="text-black text-md md:text-2xl font-semibold ms-2.5">James</span>
+          <span class="text-black text-md md:text-2xl font-semibold ms-2.5 -mt-1.5 md:ms-1 md:mt-0"
+            >Malatabon</span
+          >
+        </div>
       </div>
 
-      <div class="flex items-center justify-end">
+      <div class="hidden items-center justify-end md:flex">
         <Adventure
           v-for="adventure in adventures"
           :block-image="adventure.image"
@@ -74,10 +79,16 @@ defineProps({
           :block-year="adventure.year"
         />
       </div>
+
+      <div class="flex flex-col items-center justify-center md:hidden">
+        <span class="menu-line" />
+        <span class="menu-line my-1.5" />
+        <span class="menu-line" />
+      </div>
     </div>
 
-    <div class="flex items-end justify-between mt-auto">
-      <div class="flex items-center">
+    <div class="flex items-end justify-end mt-auto md:justify-between">
+      <div class="hidden items-center md:flex">
         <span class="link">About</span>
         <span class="link">Experience</span>
         <span class="link">Skills</span>
@@ -85,7 +96,7 @@ defineProps({
         <span class="link highlight">Let's Collaborate!</span>
       </div>
 
-      <div class="flex items-center">
+      <div class="flex items-center mt-6 md:mt-0">
         <a href="https://twitter.com/jepaninja" target="_blank" class="social-link">
           <IconTwitter />
         </a>
@@ -103,6 +114,14 @@ defineProps({
 </template>
 
 <style scoped>
+.menu-line {
+  background-color: #000;
+  width: 25px;
+  height: 2px;
+
+  @apply flex items-center rounded-xl;
+}
+
 .block {
   background-color: #fff;
   height: 100%;
@@ -140,7 +159,7 @@ defineProps({
     max-height: 20px;
     transition: opacity 200ms ease-in-out;
 
-    @apply no-underline opacity-100 ms-2 hover:opacity-50;
+    @apply no-underline opacity-100 ms-4 md:ms-2 hover:opacity-50;
   }
 }
 </style>

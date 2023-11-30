@@ -110,7 +110,7 @@ const openLink = (url: string | null) => {
   .label {
     color: '#161616';
 
-    @apply bg-white/50 w-fit font-mono text-sm tracking-tighter px-2.5 py-0.5 rounded-md;
+    @apply bg-white/50 w-fit font-mono text-sm tracking-tighter px-2.5 py-0.5 mb-1 rounded-md;
   }
 
   .title {
@@ -120,5 +120,14 @@ const openLink = (url: string | null) => {
   .description {
     @apply text-sm tracking-wide mt-1;
   }
+}
+
+.row-span-1 {
+  @apply min-h-[125px] md:min-h-full;
+}
+
+.row-span-2,
+.row-span-3 {
+  @apply min-h-[375px] md:min-h-full;
 }
 </style>

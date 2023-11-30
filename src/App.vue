@@ -19,11 +19,11 @@ const checkFocused = (blockIndex: number) =>
 
 <template>
   <div class="container mx-auto">
-    <div class="grid grid-rows-6 grid-cols-3 gap-6 min-h-screen p-6">
-      <Navbar class="row-span-1 col-span-2" />
+    <div class="grid grid-cols-1 gap-6 w-100 min-h-screen p-6 md:grid-rows-6 md:grid-cols-3">
+      <Navbar class="row-span-1 col-span-1 md:col-span-2" />
 
       <Block
-        class="row-span-2 col-span-1"
+        class="row-span-2 col-span-1 md:col-span-1"
         blockColor="#E4E2DF"
         blockLabel="Webpuppies 2023"
         blockTitle="Visa: Command Center"
@@ -34,7 +34,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-1 col-span-1"
+        class="row-span-1 col-span-1 md:col-span-1"
         blockColor="#E0DAFF"
         blockLabel="Webpuppies 2023/Present"
         blockTitle="Full-Stack Engineer"
@@ -45,7 +45,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-3 col-span-1"
+        class="row-span-3 col-span-1 md:col-span-1"
         blockLink="https://twitter.com/bushidoproj"
         blockLabel="Personal"
         blockTitle="Bushido Project"
@@ -56,7 +56,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-2 col-span-1"
+        class="row-span-2 col-span-1 md:col-span-1"
         blockLink="https://cloudica.com"
         blockLabel="Eversun 2021/2022"
         blockTitle="Cloudica"
@@ -67,7 +67,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-1 col-span-1"
+        class="row-span-1 col-span-1 md:col-span-1"
         blockColor="#FFD8D1"
         blockLabel="Others 2019"
         blockTitle="N4 Japanese Certification"
@@ -78,7 +78,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-3 col-span-1"
+        class="row-span-3 col-span-1 md:col-span-1"
         blockLabel="Block 06"
         :isBlur="!checkFocused(6)"
         @mouseover="setFocused(6)"
@@ -86,7 +86,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-2 col-span-1"
+        class="row-span-2 col-span-1 md:col-span-1"
         blockLabel="Block 07"
         :isBlur="!checkFocused(7)"
         @mouseover="setFocused(7)"
@@ -94,7 +94,7 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-2 col-span-1"
+        class="row-span-2 col-span-1 md:col-span-1"
         blockLabel="Block 08"
         :isBlur="!checkFocused(8)"
         @mouseover="setFocused(8)"
