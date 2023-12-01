@@ -1,7 +1,7 @@
 <script setup lang="ts">
 import IconOpen from '@/components/icons/IconOpen.vue'
 
-defineProps({
+const props = defineProps({
   class: {
     type: String,
     required: false
@@ -45,7 +45,8 @@ defineProps({
 })
 
 const openLink = (url: string | null) => {
-  if (/^(ftp|http|https):\/\/[^ "]+$/i.test(String(url))) window.open(String(url), '_blank')
+  if (!props.isBlur && /^(ftp|http|https):\/\/[^ "]+$/i.test(String(url)))
+    window.open(String(url), '_blank')
 }
 </script>
 
@@ -53,7 +54,7 @@ const openLink = (url: string | null) => {
   <div
     class="group block"
     :class="class"
-    :style="`background-color: ${blockColor}; opacity: ${isBlur ? 0.5 : 1}`"
+    :style="`background-color: ${blockColor}; opacity: ${isBlur ? 0.3 : 1}`"
     @click="openLink(blockLink || null)"
   >
     <span v-if="blockLabel" class="label">{{ blockLabel }}</span>
@@ -72,7 +73,7 @@ const openLink = (url: string | null) => {
       {{ blockText }}
     </span>
 
-    <span v-if="Boolean(blockLink)" class="link opacity-0 group-hover:opacity-100">
+    <span v-if="!isBlur && Boolean(blockLink)" class="link opacity-0 group-hover:opacity-100">
       <IconOpen class="icon" />
     </span>
   </div>

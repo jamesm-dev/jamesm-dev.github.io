@@ -2,7 +2,7 @@
 import { reactive } from 'vue'
 
 // components
-import Navbar from './components/Navbar.vue'
+import Navbar from '@/components/Navbar/_.vue'
 import Block from '@/components/Block.vue'
 
 const state = reactive({
@@ -10,7 +10,7 @@ const state = reactive({
 })
 
 const setFocused = (blockIndex: number = -1) => {
-  state.focusedBlockIndex = blockIndex
+  if (state.focusedBlockIndex < 8) state.focusedBlockIndex = blockIndex
 }
 
 const checkFocused = (blockIndex: number) =>
@@ -20,7 +20,15 @@ const checkFocused = (blockIndex: number) =>
 <template>
   <div class="container mx-auto">
     <div class="grid grid-cols-1 gap-6 w-100 min-h-screen p-6 md:grid-rows-6 md:grid-cols-3">
-      <Navbar class="row-span-1 col-span-1 md:col-span-2" />
+      <Navbar
+        class="row-span-1 col-span-1 md:col-span-2"
+        @on-select="
+          ($event) => {
+            // update focus index from nav
+            state.focusedBlockIndex = $event?.focusIndex
+          }
+        "
+      />
 
       <Block
         class="row-span-2 col-span-1 md:col-span-1"
@@ -28,8 +36,8 @@ const checkFocused = (blockIndex: number) =>
         blockLabel="Webpuppies 2023"
         blockTitle="Visa: Command Center"
         blockText="Crisis management system for Visa Riyadh"
-        :isBlur="!checkFocused(1)"
-        @mouseover="setFocused(1)"
+        :isBlur="!checkFocused(0)"
+        @mouseover="setFocused(0)"
         @mouseleave="setFocused()"
       />
 
@@ -39,8 +47,8 @@ const checkFocused = (blockIndex: number) =>
         blockLabel="Webpuppies 2023/Present"
         blockTitle="Full-Stack Engineer"
         blockText="Currenty part of Webpuppies Digital development team"
-        :isBlur="!checkFocused(2)"
-        @mouseover="setFocused(2)"
+        :isBlur="!checkFocused(1)"
+        @mouseover="setFocused(1)"
         @mouseleave="setFocused()"
       />
 
@@ -50,8 +58,8 @@ const checkFocused = (blockIndex: number) =>
         blockLabel="Personal"
         blockTitle="Bushido Project"
         blockText="7,777 female samurai NFT collection in Hedera Hashgraph"
-        :isBlur="!checkFocused(3)"
-        @mouseover="setFocused(3)"
+        :isBlur="!checkFocused(2)"
+        @mouseover="setFocused(2)"
         @mouseleave="setFocused()"
       />
 
@@ -61,8 +69,8 @@ const checkFocused = (blockIndex: number) =>
         blockLabel="Eversun 2021/2022"
         blockTitle="Cloudica"
         blockText="Live monitoring software for remote workers"
-        :isBlur="!checkFocused(4)"
-        @mouseover="setFocused(4)"
+        :isBlur="!checkFocused(3)"
+        @mouseover="setFocused(3)"
         @mouseleave="setFocused()"
       />
 
@@ -72,14 +80,22 @@ const checkFocused = (blockIndex: number) =>
         blockLabel="Others 2019"
         blockTitle="N4 Japanese Certification"
         blockText="Passed both JLPT and JTEST japanese language exams"
-        :isBlur="!checkFocused(5)"
-        @mouseover="setFocused(5)"
+        :isBlur="!checkFocused(4)"
+        @mouseover="setFocused(4)"
         @mouseleave="setFocused()"
       />
 
       <Block
         class="row-span-3 col-span-1 md:col-span-1"
         blockLabel="Block 06"
+        :isBlur="!checkFocused(5)"
+        @mouseover="setFocused(5)"
+        @mouseleave="setFocused()"
+      />
+
+      <Block
+        class="row-span-2 col-span-1 md:col-span-1"
+        blockLabel="Block 07"
         :isBlur="!checkFocused(6)"
         @mouseover="setFocused(6)"
         @mouseleave="setFocused()"
@@ -87,17 +103,9 @@ const checkFocused = (blockIndex: number) =>
 
       <Block
         class="row-span-2 col-span-1 md:col-span-1"
-        blockLabel="Block 07"
+        blockLabel="Block 08"
         :isBlur="!checkFocused(7)"
         @mouseover="setFocused(7)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-2 col-span-1 md:col-span-1"
-        blockLabel="Block 08"
-        :isBlur="!checkFocused(8)"
-        @mouseover="setFocused(8)"
         @mouseleave="setFocused()"
       />
     </div>

@@ -65,7 +65,7 @@ defineProps({
   .details {
     transition: opacity 200ms ease-in-out;
 
-    @apply relative pointer-events-none z-10;
+    @apply relative pointer-events-none z-20;
 
     .arrow {
       background-color: #2b2b2b;
