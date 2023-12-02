@@ -7,6 +7,10 @@ defineProps({
   show: {
     type: Boolean,
     default: false
+  },
+  data: {
+    type: Object,
+    required: true
   }
 })
 </script>
@@ -21,21 +25,18 @@ defineProps({
     "
   >
     <p class="basis-3/5 text-sm text-black/70">
-      Hi, I'm James, a full-stack developer with almost four years of experience primarily focused
-      on back-end development using native JavaScript, PHP, HTML, and CSS. In 2023, I delved into
-      frameworks, discovering my interest in advancing my skills in front-end development. While
-      adept at replicating websites, I'm keen on enhancing my originality in web design.
+      {{ data?.introduction }}
     </p>
 
     <div class="flex-grow flex flex-col items-end justify-center">
       <div class="label">
         <IconLocation class="icon" />
-        <span class="ms-1">Davao, Philippines</span>
+        <span class="ms-1">{{ data?.address }}</span>
       </div>
 
       <div class="label mt-2">
         <IconLaptop class="icon" />
-        <span class="ms-1">Remote</span>
+        <span class="ms-1">{{ data?.preferredSetup }}</span>
       </div>
     </div>
   </div>

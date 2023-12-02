@@ -1,36 +1,18 @@
 <script setup lang="ts">
+import { type IService } from '@/assets/data/navbar'
+
 // assets
 import IconLaptop from '@/components/icons/IconLaptop.vue'
 import IconLocation from '@/components/icons/IconLocation.vue'
-
-const services = [
-  {
-    order: 1,
-    title: 'Full-stack Development',
-    description: 'Build ideas into real websites from scratch',
-    type: 'Hourly Rate',
-    link: 'https://contra.com/s/6qYQov2m-full-stack-development'
-  },
-  {
-    order: 2,
-    title: 'Front-end Development',
-    description: 'Transform designs into websites with accuracy',
-    type: 'Hourly Rate',
-    link: 'https://contra.com/s/PsMZYUL6-front-end-development'
-  },
-  {
-    order: 3,
-    title: 'Landing Page Development',
-    description: 'Build landing pages for websites',
-    type: 'Fixed Price',
-    link: 'https://contra.com/s/YrcqUmAQ-landing-page-development'
-  }
-]
 
 defineProps({
   show: {
     type: Boolean,
     default: false
+  },
+  data: {
+    type: Array<IService>,
+    required: true
   }
 })
 </script>
@@ -45,21 +27,21 @@ defineProps({
     "
   >
     <div
-      v-for="(service, index) in services"
+      v-for="(item, index) in data"
       class="flex justify-between py-5"
-      :class="{ 'border-b': index !== services.length - 1 }"
+      :class="{ 'border-b': index !== data.length - 1 }"
     >
       <div class="flex flex-col">
         <div class="flex items-center">
-          <span class="text-sm">{{ service.title }}</span>
-          <span class="bg-black/10 text-xs px-2 py-0.5 ms-2 rounded">{{ service.type }}</span>
+          <span class="text-sm">{{ item.title }}</span>
+          <span class="bg-black/10 text-xs px-2 py-0.5 ms-2 rounded">{{ item.contract }}</span>
         </div>
 
-        <span class="text-sm text-black/60 mt-0.5">{{ service.description }}</span>
+        <span class="text-sm text-black/60 mt-0.5">{{ item.description }}</span>
       </div>
 
       <div class="flex-grow flex items-center justify-end">
-        <a class="button" :href="service.link" target="_blank">Contact</a>
+        <a class="button" :href="item.url" target="_blank">Contact</a>
       </div>
     </div>
   </div>

@@ -26,6 +26,10 @@ const props = defineProps({
     type: String,
     required: false
   },
+  blockTeam: {
+    type: String,
+    required: false
+  },
   blockTitle: {
     type: String,
     default: 'Block title'
@@ -57,7 +61,12 @@ const openLink = (url: string | null) => {
     :style="`background-color: ${blockColor}; opacity: ${isBlur ? 0.3 : 1}`"
     @click="openLink(blockLink || null)"
   >
-    <span v-if="blockLabel" class="label">{{ blockLabel }}</span>
+    <div class="flex items-center">
+      <span v-if="blockLabel" class="label ms-5">{{ blockLabel }}</span>
+      <span v-if="blockTeam" class="label ms-2">{{ blockTeam }}</span>
+    </div>
+
+    <slot></slot>
 
     <img v-if="blockLogo" :src="blockLogo" loading="lazy" class="logo" />
 
@@ -89,9 +98,12 @@ const openLink = (url: string | null) => {
   height: 100%;
   transition: opacity 200ms ease-in-out;
 
-  @apply relative flex flex-col box-border p-5 rounded-xl select-none;
+  @apply relative flex flex-col box-border py-5 rounded-xl select-none overflow-hidden;
 
   .logo {
+    object-fit: cover;
+    object-position: center;
+
     width: 40px;
     min-width: 40px;
     max-width: 40px;
@@ -99,7 +111,7 @@ const openLink = (url: string | null) => {
     min-height: 40px;
     max-height: 40px;
 
-    @apply mt-auto mb-2 rounded;
+    @apply mx-5 mt-auto mb-2 rounded z-10;
   }
 
   .link {
@@ -111,15 +123,15 @@ const openLink = (url: string | null) => {
   .label {
     color: '#161616';
 
-    @apply bg-white/50 w-fit font-mono text-sm tracking-tighter px-2.5 py-0.5 mb-1 rounded-md;
+    @apply bg-white/50 w-fit font-mono text-sm tracking-tighter px-2.5 py-0.5 mb-1 rounded-md z-10;
   }
 
   .title {
-    @apply font-semibold text-2xl;
+    @apply font-semibold text-2xl mx-5 z-10;
   }
 
   .description {
-    @apply text-sm tracking-wide mt-1;
+    @apply text-sm tracking-wide mx-5 mt-1 z-10;
   }
 }
 

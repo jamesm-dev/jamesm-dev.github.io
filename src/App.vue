@@ -1,5 +1,6 @@
 <script setup lang="ts">
 import { reactive } from 'vue'
+import { PORTFOLIO } from '@/assets/data/portfolio'
 
 // components
 import Navbar from '@/components/Navbar/_.vue'
@@ -31,85 +32,49 @@ const checkFocused = (blockIndex: number) =>
       />
 
       <Block
-        class="row-span-2 col-span-1 md:col-span-1"
-        blockColor="#E4E2DF"
-        blockLabel="Webpuppies 2023"
-        blockTitle="Visa: Command Center"
-        blockText="Crisis management system for Visa Riyadh"
-        :isBlur="!checkFocused(0)"
-        @mouseover="setFocused(0)"
+        v-for="(item, index) in PORTFOLIO"
+        class="md:col-span-1"
+        :class="item?.span"
+        :block-link="item?.url"
+        :block-color="item?.color"
+        :block-label="item?.label"
+        :block-logo="item?.logo"
+        :block-team="item?.team"
+        :block-title="item?.title"
+        :block-text="item?.text"
+        :is-dark="item?.dark"
+        :is-blur="!checkFocused(index)"
+        @mouseover="setFocused(index)"
         @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-1 col-span-1 md:col-span-1"
-        blockColor="#E0DAFF"
-        blockLabel="Webpuppies 2023/Present"
-        blockTitle="Full-Stack Engineer"
-        blockText="Currenty part of Webpuppies Digital development team"
-        :isBlur="!checkFocused(1)"
-        @mouseover="setFocused(1)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-3 col-span-1 md:col-span-1"
-        blockLink="https://twitter.com/bushidoproj"
-        blockLabel="Personal"
-        blockTitle="Bushido Project"
-        blockText="7,777 female samurai NFT collection in Hedera Hashgraph"
-        :isBlur="!checkFocused(2)"
-        @mouseover="setFocused(2)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-2 col-span-1 md:col-span-1"
-        blockLink="https://cloudica.com"
-        blockLabel="Eversun 2021/2022"
-        blockTitle="Cloudica"
-        blockText="Live monitoring software for remote workers"
-        :isBlur="!checkFocused(3)"
-        @mouseover="setFocused(3)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-1 col-span-1 md:col-span-1"
-        blockColor="#FFD8D1"
-        blockLabel="Others 2019"
-        blockTitle="N4 Japanese Certification"
-        blockText="Passed both JLPT and JTEST japanese language exams"
-        :isBlur="!checkFocused(4)"
-        @mouseover="setFocused(4)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-3 col-span-1 md:col-span-1"
-        blockLabel="Block 06"
-        :isBlur="!checkFocused(5)"
-        @mouseover="setFocused(5)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-2 col-span-1 md:col-span-1"
-        blockLabel="Block 07"
-        :isBlur="!checkFocused(6)"
-        @mouseover="setFocused(6)"
-        @mouseleave="setFocused()"
-      />
-
-      <Block
-        class="row-span-2 col-span-1 md:col-span-1"
-        blockLabel="Block 08"
-        :isBlur="!checkFocused(7)"
-        @mouseover="setFocused(7)"
-        @mouseleave="setFocused()"
-      />
+      >
+        <img
+          v-if="item?.image"
+          :src="item?.image"
+          class="mb-5"
+          :class="[item?.imagePlacement === 'spotlight' ? 'img-spotlight' : 'img-default']"
+        />
+      </Block>
     </div>
   </div>
 </template>
 
-<style scoped></style>
+<style scoped>
+.img-default {
+  object-fit: contain;
+  object-position: right;
+
+  position: absolute;
+  top: 0;
+  right: -20px;
+  height: 100%;
+}
+
+.img-spotlight {
+  object-fit: cover;
+  object-position: left;
+
+  height: 190px;
+  margin-top: 25px;
+  margin-left: 20px;
+}
+</style>

@@ -1,47 +1,18 @@
 <script setup lang="ts">
+import { type IExperience } from '@/assets/data/navbar'
+
 // assets
 import IconLaptop from '@/components/icons/IconLaptop.vue'
 import IconLocation from '@/components/icons/IconLocation.vue'
-
-const experiences = [
-  {
-    order: 1,
-    title: 'Web Developer (Junior)',
-    company: 'Segworks Technologies Corporation',
-    location: 'Davao, Philippines',
-    duration: '2013 - 2014',
-    setup: 'On-site'
-  },
-  {
-    order: 2,
-    title: 'Full-stack Developer',
-    company: 'Simple Content',
-    location: 'Sydney, Australia',
-    duration: '2014 - 2015',
-    setup: 'Remote'
-  },
-  {
-    order: 3,
-    title: 'Software Developer',
-    company: 'Eversun Software Philippines',
-    location: 'Davao, Philippines',
-    duration: '2021 - 2022',
-    setup: 'Remote'
-  },
-  {
-    order: 4,
-    title: 'Full-stack Developer',
-    company: 'Webpuppies Digital',
-    location: 'Singapore',
-    duration: '2023 - Present',
-    setup: 'Remote'
-  }
-]
 
 defineProps({
   show: {
     type: Boolean,
     default: false
+  },
+  data: {
+    type: Array<IExperience>,
+    required: true
   }
 })
 </script>
@@ -56,25 +27,25 @@ defineProps({
     "
   >
     <div
-      v-for="(experience, index) in experiences.sort((a, b) => b.order - a.order)"
+      v-for="(item, index) in data"
       class="flex justify-between py-5"
-      :class="{ 'border-b': index !== experiences.length - 1 }"
+      :class="{ 'border-b': index !== data.length - 1 }"
     >
       <div class="flex flex-col">
-        <span class="text-sm">{{ experience.title }}</span>
-        <span class="text-sm text-black/60 mt-0.5">{{ experience.company }}</span>
-        <span class="text-xs text-black/60 mt-1">{{ experience.duration }}</span>
+        <span class="text-sm">{{ item.title }}</span>
+        <span class="text-sm text-black/60 mt-0.5">{{ item.company }}</span>
+        <span class="text-xs text-black/60 mt-1">{{ item.duration }}</span>
       </div>
 
       <div class="flex-grow flex items-center justify-end">
         <div class="label">
           <IconLocation class="icon" />
-          <span class="ms-1">{{ experience.location }}</span>
+          <span class="ms-1">{{ item.address }}</span>
         </div>
 
         <div class="label ms-1.5">
           <IconLaptop class="icon" />
-          <span class="ms-1">{{ experience.setup }}</span>
+          <span class="ms-1">{{ item.workSetup }}</span>
         </div>
       </div>
     </div>
