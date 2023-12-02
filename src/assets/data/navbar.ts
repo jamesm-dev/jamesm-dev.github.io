@@ -1,3 +1,29 @@
+// assets
+import logoTypescript from '@/assets/icons/typescript.png'
+import logoJavascript from '@/assets/icons/javascript.png'
+import logoHTML from '@/assets/icons/html.png'
+import logoCSS from '@/assets/icons/css.png'
+import logoVue from '@/assets/icons/vue.png'
+import logoVite from '@/assets/icons/vite.png'
+import logoReact from '@/assets/icons/react.png'
+import logoTailwind from '@/assets/icons/tailwind.png'
+import logoBootstrap from '@/assets/icons/bootstrap.png'
+import logoNode from '@/assets/icons/node.png'
+import logoNuxt from '@/assets/icons/nuxt.png'
+import logoNext from '@/assets/icons/next.png'
+import logoExpress from '@/assets/icons/express.png'
+import logoPHP from '@/assets/icons/php.png'
+import logoLaravel from '@/assets/icons/laravel.png'
+import logoCodeIgniter from '@/assets/icons/codeigniter.png'
+import logoMySQL from '@/assets/icons/mysql.png'
+import logoMongoDB from '@/assets/icons/mongodb.png'
+import logoGit from '@/assets/icons/git.png'
+import logoGithub from '@/assets/icons/github.png'
+import logoFigma from '@/assets/icons/figma.png'
+import logoPhotoshop from '@/assets/icons/photoshop.png'
+import logoPostman from '@/assets/icons/postman.png'
+import logoWebflow from '@/assets/icons/webflow.png'
+
 export interface IMoment {
   title: string
   text: string
@@ -18,6 +44,7 @@ export interface ISkill {
   name: string
   type: string
   nature: string
+  tag?: string
 }
 
 export interface IService {
@@ -93,7 +120,7 @@ export const PROFILE = {
   ],
 
   introduction:
-    "Hi, I'm James, a full-stack developer with almost four years of experience primarily focused on back-end development using native JavaScript, PHP, HTML, and CSS. In 2023, I delved into frameworks, discovering my interest in advancing my skills in front-end development. While adept at replicating websites, I'm keen on enhancing my originality in web design.",
+    "Hi, I'm James, a full-stack engineer with almost four years of experience primarily focused on back-end development using native JavaScript, PHP, HTML, and CSS. In 2023, I delved into frameworks, discovering my interest in advancing my skills in front-end development. While adept at replicating websites, I'm keen on enhancing my originality in web design.",
 
   experience: [
     {
@@ -128,59 +155,68 @@ export const PROFILE = {
 
   skills: [
     {
-      label: 'Practice',
-      description: 'Libraries, frameworks, and languages that I prefer to work with',
+      label: 'Interests / Practicing',
+      description: 'Tools that I prefer or have worked with',
       items: [
         {
-          logo: '',
+          logo: logoTypescript,
           name: 'TypeScript',
           type: 'Language',
-          nature: 'Front-end'
+          nature: 'Front-end',
+          tag: '#1 interest'
         },
         {
-          logo: '',
+          logo: logoVue,
           name: 'Vue',
           type: 'Framework',
-          nature: 'Front-end'
+          nature: 'Front-end',
+          tag: '#2 interest'
         },
         {
-          logo: '',
+          logo: logoReact,
           name: 'React',
           type: 'Library',
           nature: 'Front-end'
         },
         {
-          logo: '',
+          logo: logoTailwind,
           name: 'Tailwind CSS',
+          type: 'Library',
+          nature: 'Front-end',
+          tag: '#3 interest'
+        },
+        {
+          logo: logoBootstrap,
+          name: 'Bootstrap',
           type: 'Library',
           nature: 'Front-end'
         },
         {
-          logo: '',
+          logo: logoNuxt,
           name: 'Nuxt (Vue)',
           type: 'Framework',
           nature: 'Front-end'
         },
         {
-          logo: '',
+          logo: logoNext,
           name: 'Next (React)',
           type: 'Framework',
           nature: 'Front-end'
         },
         {
-          logo: '',
+          logo: logoNode,
           name: 'Node',
           type: 'Runtime',
           nature: 'Full-stack'
         },
         {
-          logo: '',
+          logo: logoPHP,
           name: 'PHP',
           type: 'Language',
           nature: 'Back-end'
         },
         {
-          logo: '',
+          logo: logoMySQL,
           name: 'MySQL',
           type: 'Database',
           nature: 'Back-end'
@@ -189,53 +225,73 @@ export const PROFILE = {
     },
     {
       label: 'Knowledgeable',
-      description: 'Libraries and frameworks that I think I can work with',
+      description: 'Tools that I know and think I can work with',
       items: [
         {
-          logo: '',
+          logo: logoExpress,
           name: 'Express (Node)',
           type: 'Framework',
           nature: 'Back-end'
         },
         {
-          logo: '',
+          logo: logoLaravel,
           name: 'Laravel (PHP)',
           type: 'Framework',
           nature: 'Back-end'
         },
         {
-          logo: '',
+          logo: logoCodeIgniter,
           name: 'CodeIgniter (PHP)',
           type: 'Framework',
           nature: 'Back-end'
         },
         {
-          logo: '',
+          logo: logoMongoDB,
           name: 'MongoDB',
           type: 'Database',
-          nature: 'Back-end'
+          nature: 'Back-end',
+          tag: '#4 interest'
+        },
+        {
+          logo: logoWebflow,
+          name: 'Webflow',
+          type: 'CMS',
+          nature: 'Full-stack',
+          tag: '#5 interest'
         }
       ]
     },
     {
-      label: 'Tools',
-      description: 'Tools that I know and use on a daily basis',
+      label: 'Regular',
+      description: 'Tools that I know and use frequently',
       items: [
         {
-          logo: '',
+          logo: logoGit,
           name: 'Git',
           type: 'Version Control',
           nature: 'Full-stack'
         },
         {
-          logo: '',
+          logo: logoGithub,
           name: 'Github',
           type: 'Version Control',
           nature: 'Full-stack'
         },
         {
-          logo: '',
-          name: 'Figma',
+          logo: logoPostman,
+          name: 'Postman',
+          type: 'Testing',
+          nature: 'Back-end'
+        },
+        {
+          logo: logoFigma,
+          name: 'Figma (Prototype Viewing)',
+          type: 'Design',
+          nature: 'Front-end'
+        },
+        {
+          logo: logoPhotoshop,
+          name: 'Photoshop (Basic)',
           type: 'Design',
           nature: 'Front-end'
         }

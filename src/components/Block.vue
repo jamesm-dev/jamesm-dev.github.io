@@ -123,7 +123,7 @@ const openLink = (url: string | null) => {
   .label {
     color: '#161616';
 
-    @apply bg-white/50 w-fit font-mono text-sm tracking-tighter px-2.5 py-0.5 mb-1 rounded-md z-10;
+    @apply bg-white w-fit font-mono text-sm tracking-tighter px-2.5 py-0.5 mb-1 rounded-md z-10 md:bg-white/50;
   }
 
   .title {

@@ -18,7 +18,7 @@ export const PORTFOLIO = [
     span: 'row-span-1 col-span-1',
     color: '#E0DAFF',
     label: 'Webpuppies 2023/Present',
-    title: 'Full-Stack Developer',
+    title: 'Full-Stack Engineer',
     text: 'Currenty part of Webpuppies Digital development team'
   },
   {

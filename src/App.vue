@@ -50,6 +50,7 @@ const checkFocused = (blockIndex: number) =>
         <img
           v-if="item?.image"
           :src="item?.image"
+          loading="lazy"
           class="mb-5"
           :class="[item?.imagePlacement === 'spotlight' ? 'img-spotlight' : 'img-default']"
         />
@@ -62,11 +63,9 @@ const checkFocused = (blockIndex: number) =>
 .img-default {
   object-fit: contain;
   object-position: right;
-
-  position: absolute;
-  top: 0;
-  right: -20px;
   height: 100%;
+
+  @apply absolute top-0 -right-[30%] md:-right-[10%];
 }
 
 .img-spotlight {

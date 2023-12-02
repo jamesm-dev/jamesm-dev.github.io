@@ -1,10 +1,6 @@
 <script setup lang="ts">
 import { type IService } from '@/assets/data/navbar'
 
-// assets
-import IconLaptop from '@/components/icons/IconLaptop.vue'
-import IconLocation from '@/components/icons/IconLocation.vue'
-
 defineProps({
   show: {
     type: Boolean,

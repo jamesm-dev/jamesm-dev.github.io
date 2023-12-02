@@ -3,9 +3,10 @@ import { reactive } from 'vue'
 import { MOMENTS, PROFILE } from '@/assets/data/navbar'
 
 // components
-import Adventure from './Adventure.vue'
+import Moments from './Moments.vue'
 import About from './About.vue'
 import Experience from './Experience.vue'
+import Skills from './Skills.vue'
 import Collaborate from './Collaborate.vue'
 
 // assets
@@ -43,15 +44,18 @@ const setFocused = (linkIndex: number = -1) => {
         <img :src="PROFILE?.logo" class="logo rounded-md" loading="lazy" />
 
         <div class="flex flex-col md:flex-row md:items-center">
-          <span class="text-black text-md md:text-2xl font-semibold ms-2.5">James</span>
-          <span class="text-black text-md md:text-2xl font-semibold ms-2.5 -mt-1.5 md:ms-1 md:mt-0"
-            >Malatabon</span
-          >
+          <span class="text-black text-md md:text-2xl font-semibold ms-2.5">
+            {{ PROFILE?.firstName }}
+          </span>
+
+          <span class="text-black text-md md:text-2xl font-semibold ms-2.5 -mt-1.5 md:ms-1 md:mt-0">
+            {{ PROFILE?.lastName }}
+          </span>
         </div>
       </div>
 
       <div class="hidden items-center justify-end md:flex">
-        <Adventure
+        <Moments
           v-for="item in MOMENTS"
           :block-image="item.image"
           :block-title="item.title"
@@ -93,6 +97,8 @@ const setFocused = (linkIndex: number = -1) => {
     />
 
     <Experience :show="state.focusedLinkIndex === 1" :data="PROFILE?.experience" />
+
+    <Skills :show="state.focusedLinkIndex === 2" :data="PROFILE?.skills" />
 
     <Collaborate :show="state.focusedLinkIndex === 3" :data="PROFILE?.services" />
   </div>
