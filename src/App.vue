@@ -50,7 +50,6 @@ const checkFocused = (blockIndex: number) =>
         <img
           v-if="item?.image"
           :src="item?.image"
-          loading="lazy"
           class="mb-5"
           :class="[item?.imagePlacement === 'spotlight' ? 'img-spotlight' : 'img-default']"
         />
