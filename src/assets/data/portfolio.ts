@@ -54,26 +54,28 @@ export const PORTFOLIO = [
   },
   {
     span: 'row-span-3 col-span-1',
+    url: 'https://www.mfsg-tech.com/solution-categories/material-transport-system/#nav-95-tab',
     // color: '',
-    label: 'Block 06'
-    // team: '',
-    // title: '',
-    // text: ''
+    label: 'Webpuppies 2023',
+    team: 'Front-end Team',
+    title: 'MFSG: AMR Dashboard',
+    text: 'Control dashboard for Autonomous Mobile Robot'
   },
   {
     span: 'row-span-2 col-span-1 ',
     // color: '',
-    label: 'Block 07'
+    label: 'Personal',
     // team: '',
-    // title: '',
-    // text: ''
+    title: 'Soda85 Digital',
+    text: 'Copy of Soda85 landing page using Vue + Tailwind'
   },
   {
     span: 'row-span-2 col-span-1',
+    // url: '',
     // color: '',
-    label: 'Block 08'
+    label: 'Personal',
     // team: '',
-    // title: '',
-    // text: ''
+    title: 'Discord Chat',
+    text: 'Copy of Discord using React + Websocket.io'
   }
 ]

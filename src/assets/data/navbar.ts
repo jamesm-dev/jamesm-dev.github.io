@@ -63,13 +63,6 @@ export const MOMENTS: IMoment[] = [
       'https://scontent.fdvo2-2.fna.fbcdn.net/v/t1.6435-9/93702746_3459386397409867_5035806999455989760_n.jpg?_nc_cat=111&ccb=1-7&_nc_sid=7a1959&_nc_eui2=AeE-QuLCTqSp50QzyK01QJv_t4xPXEnwBIS3jE9cSfAEhA4crlaeIfHwikRaZGghwfK-KX1ZwnVPL6594a-wVQs4&_nc_ohc=3kPq17a1WjsAX-zzcs0&_nc_ht=scontent.fdvo2-2.fna&cb_e2o_trans=t&oh=00_AfBY8HOX1zQihyOk1WA-WpAxO3BcHWaUhFDKrwoZIaZ4og&oe=658F700E'
   },
   {
-    title: 'Seashell, Samal',
-    text: 'First ever company outing with Cloudica',
-    year: 2022,
-    image:
-      'https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/286361375_5917059278309221_3007906216295886604_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeFkSS_CZdLednVgmexRvbBrP0JuEWvkC9Q_Qm4Ra-QL1EDFdYEaOn2lTuC_qE5UjB33kDqRGMNrwR9vTWy2Gd7G&_nc_ohc=IFtwfkYayt8AX-hyYFz&_nc_ht=scontent.fdvo2-1.fna&cb_e2o_trans=t&oh=00_AfBmJzRjD7HxwQF3Io6u-ngs_6sso7yDEjVIkir_2Id6DA&oe=656C6B00'
-  },
-  {
     title: 'Dahican, Mati',
     text: 'Last travel with siblings before Covid',
     year: 2019,
@@ -77,11 +70,11 @@ export const MOMENTS: IMoment[] = [
       'https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/356396998_7118082318206905_5924241636572965783_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeESTohccRGwdbjzmhkD2sJllwDGkLc6mJmXAMaQtzqYmQv1sE57j7OOubkuikETVSvUEcKX57U22JoQQS_v3FqM&_nc_ohc=SVBCwP1zxqsAX8uH_Tn&_nc_ht=scontent.fdvo2-1.fna&cb_e2o_trans=t&oh=00_AfCrCY76zNAB9cGsnv0d7b9Akg7_Mt9Q3acG1lAFubdwEQ&oe=656CD5E4'
   },
   {
-    title: 'Coron, Palawan',
-    text: 'First ever visayas travel with family',
-    year: 2023,
+    title: 'Seashell, Samal',
+    text: 'First ever company outing with Cloudica',
+    year: 2022,
     image:
-      'https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/387194519_6385959431515245_4672967716658857773_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=a73e89&_nc_eui2=AeFlegUrzAt797LWuoGWsjbwAeds0nH4iOMB52zScfiI4xrOgr0Yvj8bro3uAqdK8vW0SeTPUR1FAkupkawW_fwu&_nc_ohc=bQr6R-mBk_QAX_y0xo8&_nc_ht=scontent.fdvo2-1.fna&cb_e2o_trans=t&oh=00_AfARB1NEYE95Q7XTed1xfl-WrOxoK2ZomSvxraW9yyp0FQ&oe=656C3280'
+      'https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/286361375_5917059278309221_3007906216295886604_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=9c7eae&_nc_eui2=AeFkSS_CZdLednVgmexRvbBrP0JuEWvkC9Q_Qm4Ra-QL1EDFdYEaOn2lTuC_qE5UjB33kDqRGMNrwR9vTWy2Gd7G&_nc_ohc=IFtwfkYayt8AX-hyYFz&_nc_ht=scontent.fdvo2-1.fna&cb_e2o_trans=t&oh=00_AfBmJzRjD7HxwQF3Io6u-ngs_6sso7yDEjVIkir_2Id6DA&oe=656C6B00'
   },
   {
     title: 'Eden, Toril',
@@ -89,6 +82,13 @@ export const MOMENTS: IMoment[] = [
     year: 2022,
     image:
       'https://scontent.fdvo2-2.fna.fbcdn.net/v/t39.30808-6/311334094_5223398821104651_1138360474234090454_n.jpg?_nc_cat=106&ccb=1-7&_nc_sid=a73e89&_nc_eui2=AeFhbEZ3nP2ZlyHFtKngxr1ZcXldUvhMpiRxeV1S-EymJMjp7qbaMdPXyNvQiX6rCblbjz9CvyvW8hAelMkjaEtM&_nc_ohc=1BWLRnpIE9kAX-0pFul&_nc_ht=scontent.fdvo2-2.fna&cb_e2o_trans=t&oh=00_AfA2Ce1gi1RWZBHi7NB1StMDV4R8ABjhf678ZHW7czqs3A&oe=656D1951'
+  },
+  {
+    title: 'Coron, Palawan',
+    text: 'First ever visayas travel with family',
+    year: 2023,
+    image:
+      'https://scontent.fdvo2-1.fna.fbcdn.net/v/t39.30808-6/387194519_6385959431515245_4672967716658857773_n.jpg?stp=cp6_dst-jpg&_nc_cat=104&ccb=1-7&_nc_sid=a73e89&_nc_eui2=AeFlegUrzAt797LWuoGWsjbwAeds0nH4iOMB52zScfiI4xrOgr0Yvj8bro3uAqdK8vW0SeTPUR1FAkupkawW_fwu&_nc_ohc=bQr6R-mBk_QAX_y0xo8&_nc_ht=scontent.fdvo2-1.fna&cb_e2o_trans=t&oh=00_AfARB1NEYE95Q7XTed1xfl-WrOxoK2ZomSvxraW9yyp0FQ&oe=656C3280'
   }
 ]
 
