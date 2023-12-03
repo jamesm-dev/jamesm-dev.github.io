@@ -18,7 +18,7 @@ defineProps({
   }
 })
 
-const state = reactive({ showInterests: false })
+const state = reactive({ showInterests: true })
 </script>
 
 <template>
@@ -71,7 +71,7 @@ const state = reactive({ showInterests: false })
 
     <div class="flex items-center justify-end px-2.5 mb-5">
       <span class="toggle" @click="state.showInterests = !state.showInterests">
-        {{ state.showInterests ? "Okay, I'm good now" : 'Hmm, show interests?' }}
+        {{ state.showInterests ? 'Okay, hide interests' : 'Hmm, show interests?' }}
       </span>
     </div>
   </div>

@@ -1,18 +1,28 @@
 import bushidoLogo from '@/assets/images/bushido/bushido-logo.png'
 import bushidoImg from '@/assets/images/bushido/bushido.png'
 
-import cloudicaLogo from '@/assets/images/cloudica/cloudica-logo.png'
-import cloudicaImg from '@/assets/images/cloudica/cloudica.png'
+export interface IPortfolio {
+  span: string
+  color?: string
+  dark?: boolean
+  url?: string
+  label: string
+  team?: string
+  image?: string
+  imagePlacement?: string
+  logo?: string
+  title: string
+  text: string
+}
 
-export const PORTFOLIO = [
+export const PORTFOLIO: IPortfolio[] = [
   {
     span: 'row-span-2 col-span-1',
-    color: '#E4E2DF',
-    label: 'Webpuppies 2023',
-    team: 'Front-end Team',
-    title: 'Visa: Command Center',
-    // text: 'Crisis management system for Visa Riyadh. Have been part of the front-end development team.',
-    text: 'Crisis management system for Visa Riyadh'
+    // color: '#E4E2DF',
+    label: 'Personal',
+    // team: 'Development Team',
+    title: 'Netflix Clone',
+    text: 'Copy of Netflix using React + Tailwind'
   },
   {
     span: 'row-span-1 col-span-1',
@@ -25,6 +35,7 @@ export const PORTFOLIO = [
     span: 'row-span-3 col-span-1',
     url: 'https://twitter.com/bushidoproj',
     label: 'Personal',
+    // team: 'Development Team',
     image: bushidoImg,
     imagePlacement: 'spotlight',
     logo: bushidoLogo,
@@ -33,17 +44,12 @@ export const PORTFOLIO = [
   },
   {
     span: 'row-span-2 col-span-1',
-    url: 'https://cloudica.com',
-    color: '#161616',
-    label: 'Eversun 2021/2022',
-    image: cloudicaImg,
-    imagePlacement: 'default',
-    logo: cloudicaLogo,
-    team: 'Development Team',
-    title: 'Cloudica',
-    // text: 'Live monitoring software for remote workers. Have been part of the development team during the early stages of the project.',
-    text: 'Live monitoring software for remote workers',
-    dark: true
+    // color: '#161616',
+    label: 'Personal',
+    // team: 'Development Team',
+    title: 'Spotify Clone',
+    text: 'Copy of Spotify using React + MUI'
+    // dark: true
   },
   {
     span: 'row-span-1 col-span-1',
@@ -54,15 +60,6 @@ export const PORTFOLIO = [
   },
   {
     span: 'row-span-3 col-span-1',
-    url: 'https://www.mfsg-tech.com/solution-categories/material-transport-system/#nav-95-tab',
-    // color: '',
-    label: 'Webpuppies 2023',
-    team: 'Front-end Team',
-    title: 'MFSG: AMR Dashboard',
-    text: 'Control dashboard for Autonomous Mobile Robot'
-  },
-  {
-    span: 'row-span-2 col-span-1 ',
     // color: '',
     label: 'Personal',
     // team: '',
@@ -70,12 +67,19 @@ export const PORTFOLIO = [
     text: 'Copy of Soda85 landing page using Vue + Tailwind'
   },
   {
+    span: 'row-span-2 col-span-1 ',
+    // color: '',
+    label: 'Personal',
+    // team: 'Development Team',
+    title: 'Twitter Clone',
+    text: 'Copy of Twitter using React + Tailwind'
+  },
+  {
     span: 'row-span-2 col-span-1',
-    // url: '',
     // color: '',
     label: 'Personal',
     // team: '',
-    title: 'Discord Chat',
-    text: 'Copy of Discord using React + Websocket.io'
+    title: 'Discord Clone',
+    text: 'Copy of Discord using React + Tailwind + Websocket.io'
   }
 ]
