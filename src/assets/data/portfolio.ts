@@ -1,6 +1,9 @@
 import bushidoLogo from '@/assets/images/bushido/bushido-logo.png'
 import bushidoImg from '@/assets/images/bushido/bushido.png'
 
+import portfolioDesignerLogo from '@/assets/images/portfolio/graphics-designer/logo.png'
+import portfolioDesignerImg from '@/assets/images/portfolio/graphics-designer/portfolio.png'
+
 export interface IPortfolio {
   span: string
   color?: string
@@ -33,6 +36,8 @@ export const PORTFOLIO: IPortfolio[] = [
   },
   {
     span: 'row-span-3 col-span-1',
+    // color: '#161616d9',
+    // dark: true,
     url: 'https://twitter.com/bushidoproj',
     label: 'Personal',
     // team: 'Development Team',
@@ -60,11 +65,16 @@ export const PORTFOLIO: IPortfolio[] = [
   },
   {
     span: 'row-span-3 col-span-1',
-    // color: '',
+    // color: '#161616d9',
+    // dark: true,
+    url: 'https://mjaymolit.github.io/',
     label: 'Personal',
-    // team: '',
-    title: 'Soda85 Digital',
-    text: 'Copy of Soda85 landing page using Vue + Tailwind'
+    // team: 'Development',
+    image: portfolioDesignerImg,
+    imagePlacement: 'spotlight',
+    logo: portfolioDesignerLogo,
+    title: 'Designer Portfolio',
+    text: 'Portfolio of a talented Graphics Designer and Illustrator'
   },
   {
     span: 'row-span-2 col-span-1 ',

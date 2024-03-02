@@ -69,10 +69,16 @@ const checkFocused = (blockIndex: number) =>
 
 .img-spotlight {
   object-fit: cover;
-  object-position: left;
+  object-position: 0%;
 
   height: 190px;
   margin-top: 25px;
   margin-left: 20px;
+
+  transition: object-position 200ms ease;
+}
+
+.img-spotlight:hover {
+  object-position: 110%;
 }
 </style>
