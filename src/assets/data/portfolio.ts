@@ -38,7 +38,7 @@ export const PORTFOLIO: IPortfolio[] = [
     span: 'row-span-3 col-span-1',
     // color: '#161616d9',
     // dark: true,
-    url: 'https://twitter.com/bushidoproj',
+    url: 'https://bushidoproject.fun',
     label: 'Personal',
     // team: 'Development Team',
     image: bushidoImg,
