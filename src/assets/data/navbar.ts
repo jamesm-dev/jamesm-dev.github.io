@@ -183,6 +183,12 @@ export const PROFILE = {
           nature: 'Front-end'
         },
         {
+          logo: logoReact,
+          name: 'React Native',
+          type: 'Framework',
+          nature: 'Full-stack'
+        },
+        {
           logo: logoTailwind,
           name: 'Tailwind CSS',
           type: 'Library',
