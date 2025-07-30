@@ -23,6 +23,11 @@ import logoFigma from '@/assets/icons/figma.png'
 import logoPhotoshop from '@/assets/icons/photoshop.png'
 import logoPostman from '@/assets/icons/postman.png'
 import logoWebflow from '@/assets/icons/webflow.png'
+import logoAWS from '@/assets/icons/amazon.png'
+import logoSupabase from '@/assets/icons/supabase.png'
+import logoNest from '@/assets/icons/nestjs.png'
+import logoCursor from '@/assets/icons/cursor.png'
+import logoVSCode from '@/assets/icons/vscode.png'
 
 import logoProfile from '@/assets/images/logo-profile.jpg'
 
@@ -111,11 +116,11 @@ export const PROFILE = {
     },
     {
       label: 'Youtube',
-      url: 'https://www.youtube.com/@jepaninja'
+      url: 'https://www.youtube.com/@jamesmph'
     },
     {
       label: 'Linkedin',
-      url: 'https://www.linkedin.com/in/codewithsantiago'
+      url: 'https://www.linkedin.com/in/jamesm-dev'
     },
     {
       label: 'Contra',
@@ -124,15 +129,15 @@ export const PROFILE = {
   ],
 
   introduction:
-    "Hi, I'm James, a full-stack engineer with almost four years of experience primarily focused on back-end development using native JavaScript, PHP, HTML, and CSS. In 2023, I delved into frameworks, discovering my interest in advancing my skills in front-end development. While adept at replicating websites, I'm keen on enhancing my originality in web design.",
+    "Hi, I'm James, a full-stack engineer with accumulated 7 years of experience initially focused on back-end development using native JavaScript, PHP, HTML, and CSS. In 2023, I delved into frameworks, discovering my interest in advancing my skills in front-end development. While adept at replicating websites, I'm keen on enhancing my originality in web design.",
 
   experience: [
     {
-      title: 'Full-stack Developer',
+      title: 'Full-stack Engineer',
       company: 'Webpuppies Digital',
       address: 'Singapore',
       workSetup: 'Remote',
-      duration: '2023 - Present'
+      duration: '2023 - 2025'
     },
     {
       title: 'Software Developer',
@@ -142,14 +147,14 @@ export const PROFILE = {
       duration: '2021 - 2022'
     },
     {
-      title: 'Full-stack Developer',
+      title: 'Full-Stack Engineer',
       company: 'Simple Content',
       address: 'Sydney, Australia',
       workSetup: 'Remote',
       duration: '2014 - 2015'
     },
     {
-      title: 'Web Developer (Junior)',
+      title: 'Junior Web Developer',
       company: 'Segworks Technologies Corporation',
       address: 'Davao, Philippines',
       workSetup: 'On-site',
@@ -268,6 +273,24 @@ export const PROFILE = {
           type: 'CMS',
           nature: 'Full-stack',
           tag: '#5 interest'
+        },
+        {
+          logo: logoAWS,
+          name: 'AWS (Lambda, S3, EC2)',
+          type: 'Web Services',
+          nature: 'Full-stack'
+        },
+        {
+          logo: logoSupabase,
+          name: 'Supabase',
+          type: 'Database',
+          nature: 'Back-end'
+        },
+        {
+          logo: logoNest,
+          name: 'NestJS',
+          type: 'Framework',
+          nature: 'Back-end'
         }
       ]
     },
@@ -283,7 +306,7 @@ export const PROFILE = {
         },
         {
           logo: logoGithub,
-          name: 'Github',
+          name: 'Github (Github Actions)',
           type: 'Version Control',
           nature: 'Full-stack'
         },
@@ -304,6 +327,18 @@ export const PROFILE = {
           name: 'Photoshop (Basic)',
           type: 'Design',
           nature: 'Front-end'
+        },
+        {
+          logo: logoCursor,
+          name: 'Cursor (Cursor AI)',
+          type: 'IDE',
+          nature: 'Full-stack'
+        },
+        {
+          logo: logoVSCode,
+          name: 'VSCode (Co-pilot)',
+          type: 'IDE',
+          nature: 'Full-stack'
         }
       ]
     }
@@ -311,13 +346,13 @@ export const PROFILE = {
 
   services: [
     {
-      title: 'Full-stack Development',
+      title: 'Full-Stack Development',
       description: 'Build ideas into real website from scratch',
       contract: 'Hourly Rate',
       url: 'https://contra.com/s/6qYQov2m-full-stack-development'
     },
     {
-      title: 'Front-end Development',
+      title: 'Front-End Development',
       description: 'Transform designs into websites with accuracy',
       contract: 'Hourly Rate',
       url: 'https://contra.com/s/PsMZYUL6-front-end-development'

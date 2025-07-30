@@ -4,6 +4,8 @@ import bushidoImg from '@/assets/images/bushido/bushido.png'
 import portfolioDesignerLogo from '@/assets/images/portfolio/graphics-designer/logo.png'
 import portfolioDesignerImg from '@/assets/images/portfolio/graphics-designer/portfolio.png'
 
+import portfolioDeicidiumLogo from '@/assets/images/portfolio/deicidium/logo.png'
+
 export interface IPortfolio {
   span: string
   color?: string
@@ -22,17 +24,22 @@ export const PORTFOLIO: IPortfolio[] = [
   {
     span: 'row-span-2 col-span-1',
     // color: '#E4E2DF',
+    // color: '#161616d9',
+    // dark: true,
+    url: 'https://deicidium.netlify.app',
     label: 'Personal',
     // team: 'Development Team',
-    title: 'Netflix Clone',
-    text: 'Copy of Netflix using React + Tailwind'
+    // image: null,
+    logo: portfolioDeicidiumLogo,
+    title: 'Deicidium',
+    text: 'NightCrows GLOBAL guild manager web application'
   },
   {
     span: 'row-span-1 col-span-1',
     color: '#E0DAFF',
-    label: 'Webpuppies 2023/Present',
+    label: 'Webpuppies 2023/2025',
     title: 'Full-Stack Engineer',
-    text: 'Currenty part of Webpuppies Digital development team'
+    text: 'Currently unemployed and actively looking for a job'
   },
   {
     span: 'row-span-3 col-span-1',
@@ -52,8 +59,8 @@ export const PORTFOLIO: IPortfolio[] = [
     // color: '#161616',
     label: 'Personal',
     // team: 'Development Team',
-    title: 'Spotify Clone',
-    text: 'Copy of Spotify using React + MUI'
+    title: 'Future Project',
+    text: 'Blank space for future projects'
     // dark: true
   },
   {
@@ -81,15 +88,15 @@ export const PORTFOLIO: IPortfolio[] = [
     // color: '',
     label: 'Personal',
     // team: 'Development Team',
-    title: 'Twitter Clone',
-    text: 'Copy of Twitter using React + Tailwind'
+    title: 'Future Project',
+    text: 'Blank space for future projects'
   },
   {
     span: 'row-span-2 col-span-1',
     // color: '',
     label: 'Personal',
     // team: '',
-    title: 'Discord Clone',
-    text: 'Copy of Discord using React + Tailwind + Websocket.io'
+    title: 'Future Project',
+    text: 'Blank space for future projects'
   }
 ]
